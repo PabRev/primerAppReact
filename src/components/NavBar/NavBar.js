@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
+import CartWidget from './CartWidget';
+
 
 function BasicExample() {
   return (
@@ -24,10 +26,12 @@ function BasicExample() {
               <NavDropdown.Item href="#action/3.4">
                 Enviar mensaje
               </NavDropdown.Item>
+              
             </NavDropdown>
           </Nav>
           <Button variant="outline-success">Ir a pagar</Button>
         </Navbar.Collapse>
+        <CartWidget/>
       </Container>
     </Navbar>
   );

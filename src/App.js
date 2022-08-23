@@ -6,14 +6,16 @@ import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 function App() {
   return (
     <div>
       <div><NavBar/></div>
       <Row className="mx-3">
-        <Cards/>
+        <Cards bebida1='Vodka Smirnoff Limon' bebida2='Vodka Absolut Clasico'/>
         <ItemListContainer/>
       </Row>
+      
       
     </div>
   );

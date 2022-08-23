@@ -4,14 +4,16 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 
-function GroupExample() {
+function GroupExample(props) {
+
+
   return (
     <Col className='container col-md-8 m-3 mt-5'>
     <CardGroup >
       <Card>
         <Card.Img variant="top" src='./assets/absoluts.png' />
         <Card.Body>
-          <Card.Title>Vodka Smirnoff</Card.Title>
+          <Card.Title>{props.bebida1}</Card.Title>
           <Card.Text>
             This is a wider card with supporting text below as a natural lead-in
             to additional content.
@@ -26,7 +28,7 @@ function GroupExample() {
       <Card>
         <Card.Img variant="top" src="./assets/absoluts.png" />
         <Card.Body>
-          <Card.Title>Vodka Absolut Apple</Card.Title>
+          <Card.Title>{props.bebida2}</Card.Title>
           <Card.Text>
             This card has supporting text below as a natural lead-in to
             additional.
