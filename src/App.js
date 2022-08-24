@@ -4,7 +4,7 @@ import Cards from "./components/Cards/Cards";
 import ItemListContainer from "./components/Carrito/ItemListContainer";
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import ItemCount from "./components/Counter/ItemCount";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Cards bebida1='Vodka Smirnoff Limon' bebida2='Vodka Absolut Clasico'/>
         <ItemListContainer/>
       </Row>
-      
+      <ItemCount/>
       
     </div>
   );
