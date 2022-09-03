@@ -6,9 +6,8 @@ const ItemList = ({ productos = [] }) => {
 
 
     return (
-        <div>
-            <h2>Productos</h2>
-            <hr />
+        <div> <h2>Productos</h2>
+        <hr />
             <div className="row">
 
             {productos.map((prod) => {

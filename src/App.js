@@ -1,6 +1,6 @@
 import "./App.css"
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/Carrito/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 function App() {
   return (
+    
     <BrowserRouter>
     
           <div>

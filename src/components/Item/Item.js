@@ -8,8 +8,9 @@ const Item = ({producto}) => {
 
 
     return(
-        <Card className="col-md-3 m-1">
-        <Card.Img className="shadow rounded mt-2" variant="top" src={producto.img} />
+      <div className="container col-md-3">
+        <Card className="m-2">
+        <Card.Img className="shadow rounded my-2" variant="top" src={producto.img} />
         <Card.Body>
           <Card.Title>{producto.name}</Card.Title>
           <Card.Text>
@@ -31,11 +32,11 @@ const Item = ({producto}) => {
             </Col>
             </Row>
             <Row>
-            <Link to={`/item/${producto.id}`}>Ver mas</Link>
+            <Link className="btn btn-secondary" to={`/item/${producto.id}`}>Ver mas</Link>
                 </Row>
         </Card.Footer>
       </Card>
-        
+      </div>
 
         
 

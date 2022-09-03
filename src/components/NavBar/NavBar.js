@@ -15,14 +15,14 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/">Inicio</Link>
-            <Link to="/productos/">Productos</Link>
-            <Link to="contactanos">Contactanos</Link>
-            <NavDropdown title="Preguntas Frecuentes" id="basic-nav-dropdown">
+            <Link className="dropdown-item my-auto text-muted me-2" to="/">Inicio</Link>
+            <Link className="dropdown-item my-auto text-muted me-2" to="/productos/">Productos</Link>
+            <Link className="dropdown-item my-auto text-muted me-2" to="contactanos">Contactanos</Link>
+            <NavDropdown title="Acceso Rapido" id="basic-nav-dropdown">
+              <Link className="dropdown-item my-auto" to="/productos/licor">Licores</Link>
+              <Link className="dropdown-item my-auto" to="/productos/vodka">Vodka</Link>
+              <Link className="dropdown-item my-auto" to="/productos/whisky">Whisky</Link>
               <NavDropdown.Item href="#action/3.1">Hacen eventos?</NavDropdown.Item>
-              <Link to="/productos/licor">Licores</Link>
-              <Link to="/productos/vodka">Vodka</Link>
-              <Link to="/productos/whisky">Whisky</Link>
               <NavDropdown.Item href="#action/3.2">
                 Como hago para comprar?
               </NavDropdown.Item>
