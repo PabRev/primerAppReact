@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import {useParams} from "react-router-dom";
+import useParams from "react-router-dom";
 import {pedirProductos } from '../../helpers/pedirProductos'
 import ItemList from '../ItemList/ItemList.js'
 
-function ItemListContainer() {
+function DefaultExample() {
 
 const [productos, setProductos] = useState([]);
+console.log(productos)
 
-const {categoryId} = useParams();
-console.log(categoryId)
+const {categoryId} = useParams()
 
 useEffect(()=>{
   pedirProductos()
   .then( (res) => {
-    if(!categoryId) setProductos(res);
-    else setProductos(res.filter((prod) => prod.category === categoryId))
+    
+    setProductos(res);
     
   })
   .catch((error)=> {
     console.log(error);
   })
-},[categoryId])
+},[])
 
   return (
    <div  className="container">
@@ -29,4 +29,4 @@ useEffect(()=>{
   );
 }
 
-export default ItemListContainer;
+export default DefaultExample;

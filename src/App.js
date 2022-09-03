@@ -1,22 +1,27 @@
 import "./App.css"
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/Carrito/ItemListContainer";
-import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from "./components/Counter/ItemCount";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 
 function App() {
   return (
-    <div>
-      <div><NavBar/></div>
-      <Row className="mx-3">
-        
-        <ItemListContainer/>
-      </Row>
-      <ItemCount/>
-      
-    </div>
+    <BrowserRouter>
+    
+          <div>
+            <div><NavBar/></div>
+            <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route path="/productos/:categoryId/" element={<ItemListContainer/>} />
+            <Route path="*" element={<Navigate to="/"/>} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
+          
+             </Routes>
+          </div>
+      </BrowserRouter>
   );
 }
 

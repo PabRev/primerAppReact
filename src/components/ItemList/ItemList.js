@@ -9,9 +9,11 @@ const ItemList = ({ productos = [] }) => {
         <div>
             <h2>Productos</h2>
             <hr />
+            <div className="row">
+
             {productos.map((prod) => {
                 return <Item producto={prod} key={prod.id} />
-            })}
+            })}</div>
         </div>
     )
 }
