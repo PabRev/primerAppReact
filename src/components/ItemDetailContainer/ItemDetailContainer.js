@@ -7,8 +7,8 @@ import ItemDetail from '../ItemDetailContainer/ItemDetail.js'
 
  const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState(null)
-    const {itemId} = useParams(null)
+    const [item, setItem] = useState({})
+    const {itemId} = useParams()
 
     console.log(itemId)
     console.log(item)
@@ -23,13 +23,13 @@ import ItemDetail from '../ItemDetailContainer/ItemDetail.js'
         .catch(err => console.log(err) )
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [itemId])
 
 
 
     return(
         <div className="container">
-        <p>Ver el item</p>
+        <h3>Detalle de producto</h3>
        <ItemDetail item={item}/>
  
         </div>
