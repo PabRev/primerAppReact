@@ -1,11 +1,23 @@
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom';
 import ItemCount from '../Counter/ItemCount.js'
+import useState from 'react'
 
 const ItemDetail = ({item}) => {
 
+
+  const [cantidad, setCantidad] = useState(1)
+
+
+  const handleAgregar= ()=>{
+        
+        console.log({
+        ...item,
+        cantidad
+        })
+  }
 
     return(
         <Card className="col-md-4 m-1">
@@ -31,8 +43,13 @@ const ItemDetail = ({item}) => {
             </Col>
             </Row>
             <Row>
-            <ItemCount/>
-            <Button variant="secondary">Agregar al carrito</Button>
+            <ItemCount 
+            max={item.quantity}
+            counter={cantidad}
+            setCounter = {setCantidad}
+            handleAgregar = {handleAgregar}
+            />
+            <Link className="btn btn-primary" onClick={handleAgregar} to={`/item/Cart`}>Ver mas</Link>
                 </Row>
         </Card.Footer>
       </Card>

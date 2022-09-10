@@ -1,26 +1,28 @@
-import { useState } from "react"
 import Button from 'react-bootstrap/Button'
 
-const Counter = () => {
+const Counter = ({max, counter, setCounter, handleAgregar }) => {
 
 
-        let [counter, setCounter] = useState(0)
+        
 
-    const sumar = () => {
-        if(counter<10){setCounter(counter+1)}
+    const handleSumar = () => {
+       if(counter<max){setCounter(counter+1)}
         
     }
 
-    const restar= ()=>{
+    const handleRestar= ()=>{
         if(counter>0){setCounter(counter - 1)}
         
     }
+    
+
+
     return(
 
             <div className="rounded border p-2">
-                <button size='sm' onClick={restar} className="btn outline-secondary">-</button>
+                <button size='sm' onClick={handleRestar} className="btn outline-secondary">-</button>
                 <span className="mx-2">{counter}</span>
-                <button size="sm" onClick={sumar}  className="btn outline-secondary">+</button>
+                <button size="sm" onClick={handleSumar}  className="btn outline-secondary">+</button>
                 <Button size='sm' variant="outline-secondary mx-1">Agregar</Button>
             </div>
         
