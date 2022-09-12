@@ -1,27 +1,35 @@
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Link } from 'react-router-dom';
 import ItemCount from '../Counter/ItemCount.js'
-import useState from 'react'
+import {useState, useContext} from 'react'
+import { CartContext } from '../Cart/CartContext.js'
+import { Link } from 'react-router-dom'
 
+ 
 const ItemDetail = ({item}) => {
 
-
+  const{cart, addToCart, isInCart} = useContext(CartContext);
+  console.log(cart)
   const [cantidad, setCantidad] = useState(1)
 
 
   const handleAgregar= ()=>{
         
-        console.log({
-        ...item,
-        cantidad
-        })
+        const itemToCart ={
+          id: item.id,
+          precio: item.price,
+          nombre: item.name,
+          cantidad: item.quantity
+
+        }
+        isInCart(item.id)
+       addToCart(itemToCart)
   }
 
     return(
         <Card className="col-md-4 m-1">
-        <img className='top' alt='imagen' src={item.img} />
+        <Card.Img className='top' alt='imagen' src={item.img} />
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>
@@ -43,14 +51,26 @@ const ItemDetail = ({item}) => {
             </Col>
             </Row>
             <Row>
-            <ItemCount 
-            max={item.quantity}
-            counter={cantidad}
-            setCounter = {setCantidad}
-            handleAgregar = {handleAgregar}
-            />
-            <Link className="btn btn-primary" onClick={handleAgregar} to={`/item/Cart`}>Ver mas</Link>
+
+      {//isInCart(item.id) && <p>El item ya esta agregado</p>
+}
+      {
+        isInCart(item.id)
+        ? <Link className="btn btn-primary"  to={`/Cart`}>Terminar compra</Link>
+        :<ItemCount 
+        max={item.quantity}
+        counter={cantidad}
+        setCounter = {setCantidad}
+        handleAgregar = {handleAgregar}
+        />
+        
+      }
+
+
+
+           
                 </Row>
+              
         </Card.Footer>
       </Card>
         
