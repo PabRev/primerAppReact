@@ -7,14 +7,14 @@ const Cart = () => {
     const {cart, cartTotal, vaciarCart, removeItem} = useContext(CartContext);
  
     return (    
-        <div className="container">
+        <div className="container bg-light">
             <h2>Tu carrito</h2>
             <hr/>
 
 
                 {cart.map((item) => (
 
-                <div key={item.id}>
+                <div key={item.id} className="bg-light">
 
                     <h3>Producto: {item.name}</h3>
                     <p>Precio: {item.price}</p>

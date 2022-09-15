@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
           id: item.id,
           precio: item.price,
           nombre: item.name,
-          cantidad: item.quantity
+          cantidad,
 
         }
         isInCart(item.id)
