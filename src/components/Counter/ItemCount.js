@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 
 const Counter = ({max, counter, setCounter, handleAgregar }) => {
 
@@ -23,7 +22,7 @@ const Counter = ({max, counter, setCounter, handleAgregar }) => {
                 <button size='sm' onClick={handleRestar} className="btn outline-secondary">-</button>
                 <span className="mx-2">{counter}</span>
                 <button size="sm" onClick={handleSumar}  className="btn outline-secondary">+</button>
-                <Link className="btn btn-primary" onClick={handleAgregar}>Agregar</Link>
+                <button className="btn btn-primary" onClick={handleAgregar} >Agregar</button>
             </div>
         
     )

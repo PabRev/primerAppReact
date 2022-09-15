@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ItemCount from '../Counter/ItemCount.js'
+import ItemCount from '../Counter/ItemCount'
 import {useState, useContext} from 'react'
 import { CartContext } from '../Cart/CartContext.js'
 import { Link } from 'react-router-dom'
@@ -51,25 +51,23 @@ const ItemDetail = ({item}) => {
             </Col>
             </Row>
             <Row>
-
-      {//isInCart(item.id) && <p>El item ya esta agregado</p>
-}
-      {
+        {
         isInCart(item.id)
-        ? <Link className="btn btn-primary"  to={`/Cart`}>Terminar compra</Link>
-        :<ItemCount 
-        max={item.quantity}
-        counter={cantidad}
-        setCounter = {setCantidad}
-        handleAgregar = {handleAgregar}
-        />
+        ?
+          <Link className="btn btn-primary"  to={"/cart"} >Terminar compra</Link>
+          
+        :
+          <ItemCount 
+                max={item.quantity}
+                counter={cantidad}
+                setCounter = {setCantidad}
+                handleAgregar = {handleAgregar}
+          />
+        }
         
-      }
-
-
-
+      
            
-                </Row>
+          </Row>
               
         </Card.Footer>
       </Card>
