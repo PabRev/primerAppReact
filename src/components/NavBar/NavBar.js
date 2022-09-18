@@ -11,7 +11,8 @@ function BasicExample() {
   return (
     <Navbar bg="white" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Tienda E-Commerce de Bebidas</Navbar.Brand>
+        <Navbar.Brand href="#home">LOGO</Navbar.Brand>
+        <Link className="dropdown-item my-auto me-2 fs-2" to="/">Tienda E-Commerce de Bebidas</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -34,7 +35,7 @@ function BasicExample() {
               
             </NavDropdown>
           </Nav>
-          <Button variant="outline-success">Ir a pagar</Button>
+          <Link className="dropdown-item my-auto text-muted me-2" to="/">Volver a comprar</Link>
         </Navbar.Collapse>
         <CartWidget/>
       </Container>

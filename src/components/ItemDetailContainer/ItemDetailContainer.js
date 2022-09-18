@@ -1,8 +1,9 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {pedirProductos} from '../../helpers/pedirProductos'
+import {db} from ".././firebase/config"
 import ItemDetail from '../ItemDetailContainer/ItemDetail.js'
+import {doc, getDoc} from "firebase/firestore"
 
 
  const ItemDetailContainer = () => {
@@ -14,14 +15,9 @@ import ItemDetail from '../ItemDetailContainer/ItemDetail.js'
     console.log(item)
     useEffect(() => {
 
-        pedirProductos()
-
-        .then( (res) => {
-            setItem(res.find((prod) => prod.id === itemId))
-        })
-
-        .catch(err => console.log(err) )
-
+        const docRef = doc( db, 'productos', itemId )
+        getDoc(docRef)
+            .then((doc) => setItem({id:doc.id, ...doc.data()}))
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [itemId])
 

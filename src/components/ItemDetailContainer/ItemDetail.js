@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
 
   const{cart, addToCart, isInCart} = useContext(CartContext);
   console.log(cart)
-  const [cantidad, setCantidad] = useState(1)
+  const [cantidad, setCantidad] = useState(0) 
 
 
   const handleAgregar= ()=>{
@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
           id: item.id,
           precio: item.price,
           nombre: item.name,
-          cantidad,
+          cantidad
 
         }
         isInCart(item.id)

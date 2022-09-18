@@ -1,8 +1,8 @@
 export const stock = [
     {id: '1', name: 'Absolut 700cc', price: 3200, quantity:7,img:'https://via.placeholder.com/250',category:"vodka"},
     {id: '2', name: 'Smirnoff 700cc', price: 4900, quantity:3,img:'https://via.placeholder.com/250',category:"vodka"},
-    {id: '3', name: 'Sheridans 700cc', price: 4600, quantity:1,img:'https://via.placeholder.com/250',category:"licor"},
-    {id: '4', name: 'Jack Daniels 700cc', price: 4700, quantity:1,img:'https://via.placeholder.com/250', category:"whisky"},
+    {id: '3', name: 'Sheridans 700cc', price: 4600, quantity:2,img:'https://via.placeholder.com/250',category:"licor"},
+    {id: '4', name: 'Jack Daniels 700cc', price: 4700, quantity:8,img:'https://via.placeholder.com/250', category:"whisky"},
     {id: '5', name: 'Jose Cuervo 700cc', price: 5120, quantity:1,img:'https://via.placeholder.com/250', category:"whisky"},
     {id: '6', name: 'White Horse 700cc', price: 3100, quantity:3,img:'https://via.placeholder.com/250', category:"whisky"},
     {id: '7', name: 'Jack Daniels Honey 700cc', price: 4900, quantity:1,img:'https://via.placeholder.com/250', category:"whisky"},
