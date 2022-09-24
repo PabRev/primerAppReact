@@ -18,7 +18,7 @@ useEffect(()=>{
               ? query(productosRef, where('category', '==', categoryId))
               : productosRef;
 
-    getDocs(productosRef)
+    getDocs(q)
     .then((snapshot)=>{
       const productosDB = snapshot.docs.map( (doc)=>({id:doc.id, ...doc.data()}) )
       console.log(productosDB);

@@ -1,8 +1,9 @@
-import Badge from 'react-bootstrap/Badge';
+
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useCartContext } from '../Cart/CartContext';
 import {Link} from 'react-router-dom'
-import { Button } from 'react-bootstrap/Button';
+import ItemCount from '../Counter/ItemCount'
+
 
 const Cart = () => {
 
@@ -37,6 +38,7 @@ const Cart = () => {
                                             <div className="fw-bold">{item.nombre}</div>
                                             AR$ {item.precio} <br/>
                                             <small className='text-muted'>Unidades: {item.cantidad}</small>
+                                            <ItemCount/>
                                         </div>
                                         <button onClick={()=> removeItem(item.id)} className='btn btn-outline-danger rounded-circle' >
                                             X
@@ -52,7 +54,7 @@ const Cart = () => {
  
                         <h4>Total: ${cartTotal()}</h4>
                         <button className="btn btn-danger my-3 mx-1" onClick={vaciarCart}>Vaciar Carrito</button>
-                        <button className="btn btn-outline my-3 mx-1" onClick={vaciarCart}>Ir a pagar</button>
+                        <Link className='btn btn-success' to='/checkout'>Terminar mi compra</Link>
         </>
 
 }
