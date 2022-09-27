@@ -25,7 +25,7 @@ import {doc, getDoc} from "firebase/firestore"
 
     return(
         <div className="container">
-        <h3>Detalle de producto</h3>
+        <h3 className='text-white my-3'>Detalle de producto</h3>
        <ItemDetail item={item}/>
  
         </div>
