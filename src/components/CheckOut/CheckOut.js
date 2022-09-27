@@ -103,7 +103,7 @@ const Checkout = () => {
             value={values.dni} 
             type={'text'} 
             className="my-3 form-control" 
-            placeholder="Ingresa tu numero de documento" />
+            placeholder="Ingresa tu nro de documento" />
 
             <input 
             name="email" 
