@@ -18,11 +18,10 @@ function BasicExample() {
           <Nav className="me-auto">
             <Link className="dropdown-item my-auto text-muted me-2" to="/">Inicio</Link>
             <Link className="dropdown-item my-auto text-muted me-2" to="/productos/">Productos</Link>
-            <Link className="dropdown-item my-auto text-muted me-2" to="contactanos">Contactanos</Link>
-            <NavDropdown title="Acceso Rapido" id="basic-nav-dropdown">
+            <NavDropdown title="Filtrar" id="basic-nav-dropdown">
               <Link className="dropdown-item my-auto" to="/productos/licor">Licores</Link>
               <Link className="dropdown-item my-auto" to="/productos/vodka">Vodka</Link>
-              <Link className="dropdown-item my-auto" to="/productos/whisky">Whisky</Link>
+              <Link className="dropdown-item my-auto" to="/productos/whisky">Whisky</Link><hr/>
               <NavDropdown.Item href="#action/3.1">Hacen eventos?</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Como hago para comprar?

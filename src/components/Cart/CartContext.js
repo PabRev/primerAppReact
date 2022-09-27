@@ -29,6 +29,9 @@ export const CartProvider = ({children}) => {
   const vaciarCart = () => {
     setCart([])
   }
+  const terminarCompra = () => {
+    setCart([])
+  }
 
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(cart))
@@ -43,7 +46,8 @@ export const CartProvider = ({children}) => {
       cartQ,
       cartTotal,
       removeItem,
-      vaciarCart
+      vaciarCart,
+      terminarCompra
     }}>
         {children}
     </CartContext.Provider>

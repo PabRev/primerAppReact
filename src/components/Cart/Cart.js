@@ -16,13 +16,13 @@ const Cart = () => {
 {
     cart.length === 0
         ?
-        <><h2>Tu Carrito esta vacio</h2>
+        <div><h2 className='my-4'>Tu Carrito esta vacio</h2>
         <hr/>
-        <Link to="/" className="btn btn-primary my-3">Volver a comprar</Link></>
+        <Link to="/" className="btn btn-primary my-3">Volver a comprar</Link></div>
 
         :
-        <>
-                <h2>Tu carrito</h2>
+        <div>
+                <h2 className='my-3'>Tu carrito</h2>
                     <hr/> 
 
 
@@ -38,7 +38,8 @@ const Cart = () => {
                                             <div className="fw-bold">{item.nombre}</div>
                                             AR$ {item.precio} <br/>
                                             <small className='text-muted'>Unidades: {item.cantidad}</small>
-                                            <ItemCount/>
+                                        
+
                                         </div>
                                         <button onClick={()=> removeItem(item.id)} className='btn btn-outline-danger rounded-circle' >
                                             X
@@ -55,7 +56,7 @@ const Cart = () => {
                         <h4>Total: ${cartTotal()}</h4>
                         <button className="btn btn-danger my-3 mx-1" onClick={vaciarCart}>Vaciar Carrito</button>
                         <Link className='btn btn-success' to='/checkout'>Terminar mi compra</Link>
-        </>
+        </div>
 
 }
             
