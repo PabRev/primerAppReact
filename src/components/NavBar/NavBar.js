@@ -11,8 +11,8 @@ function BasicExample() {
   return (
     <Navbar bg="white" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">LOGO</Navbar.Brand>
-        <Link className="dropdown-item my-auto me-2 fs-2" to="/">Tienda E-Commerce de Bebidas</Link>
+        
+        <Link className="dropdown-item my-auto me-2 fs-2" to="/">E-Commerce de Bebidas</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

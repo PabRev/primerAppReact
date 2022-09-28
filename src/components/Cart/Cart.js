@@ -11,24 +11,24 @@ const Cart = () => {
     const {cart, cartTotal, vaciarCart, removeItem} = useCartContext();
  
     return (    
-        <div className="container bg-light">
+        <div className="container bg-light rounded shadow border my-3">
 
 {
     cart.length === 0
         ?
-        <div><h2 className='my-4'>Tu Carrito esta vacio</h2>
+        <div className='d-flex'><h2 className='my-auto'>Tu Carrito esta vacio</h2>
         <hr/>
-        <Link to="/" className="btn btn-primary my-3">Volver a comprar</Link></div>
+        <Link to="/" className="btn btn-primary ms-4 my-3">Volver a comprar</Link></div>
 
         :
         <div>
-                <h2 className='my-3'>Tu carrito</h2>
+                <h2 className='my-3 text-center'>Tu carrito</h2>
                     <hr/> 
 
 
                         {cart.map((item) => (
 
-                            <div key={item.id} className="bg-light">
+                            <div key={item.id} className="bg-light rounded border my-2 shadow">
 
                             <ListGroup.Item
                             as="li"
@@ -41,8 +41,8 @@ const Cart = () => {
                                         
 
                                         </div>
-                                        <button onClick={()=> removeItem(item.id)} className='btn btn-outline-danger rounded-circle' >
-                                            X
+                                        <button onClick={()=> removeItem(item.id)} className='btn btn-outline-danger rounded-pill my-auto me-4' >
+                                            Eliminar
                                         </button>
                                 </ListGroup.Item>
                                 <hr/>
@@ -52,10 +52,11 @@ const Cart = () => {
 
 
                         }
- 
-                        <h4>Total: ${cartTotal()}</h4>
-                        <button className="btn btn-danger my-3 mx-1" onClick={vaciarCart}>Vaciar Carrito</button>
-                        <Link className='btn btn-success' to='/checkout'>Terminar mi compra</Link>
+                        
+                        <h3 className='my-2 text-center'>Total: ${cartTotal()}</h3>
+                        <button className="btn btn-outline-danger rounded-pill my-3 mx-1 shadow" onClick={vaciarCart}>Vaciar Carrito</button>
+                        <Link className='btn btn-outline-success rounded-pill shadow' to='/checkout'>Terminar mi compra</Link>
+                        
         </div>
 
 }

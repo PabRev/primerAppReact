@@ -57,7 +57,14 @@ const ItemDetail = ({item}) => {
                     <Row>
                         {isInCart(item.id)
                           ?
-                          <Link className="btn btn-primary"  to={"/cart"} >Terminar compra</Link>
+                          <div className='d-flex'>
+                          
+                          <Link className="btn btn-primary m-1"  to={"/cart"} >Terminar compra</Link>
+                          
+                          
+                          <Link className="btn btn-secondary m-1"  to={"/"} >Seguir comprando</Link>
+                          
+                          </div>
                           :
                           <ItemCount 
                                 max={item.quantity}
