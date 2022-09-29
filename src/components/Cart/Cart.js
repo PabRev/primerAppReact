@@ -16,9 +16,10 @@ const Cart = () => {
 {
     cart.length === 0
         ?
-        <div className='d-flex'><h2 className='my-auto'>Tu Carrito esta vacio</h2>
+        <div className='d-flex justify-evenly'><h2 className='my-auto'>Tu Carrito esta vacio</h2>
         <hr/>
-        <Link to="/" className="btn btn-primary ms-4 my-3">Volver a comprar</Link></div>
+                <Link to="/" className="btn btn-primary ms-4 my-3">Volver a comprar</Link>
+        </div>
 
         :
         <div>
