@@ -18,7 +18,7 @@ const Checkout = () => {
     const [values, setValues] = useState({
             nombre: '',
             dni: '',
-            email: ''
+            email: '' 
     })
 
 
