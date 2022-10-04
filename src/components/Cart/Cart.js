@@ -2,7 +2,7 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useCartContext } from '../Cart/CartContext';
 import {Link} from 'react-router-dom'
-import ItemCount from '../Counter/ItemCount'
+
 
 
 const Cart = () => {
